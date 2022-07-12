@@ -28,7 +28,7 @@ const Calculator = () =>{
           
     }
 
-    useEffect((calcData)=>{resultCalc(calcData)}, [calcData.interest])
+    //useEffect((calcData)=>{resultCalc(calcData)}, [calcData.interest])
 
     
     //Handle Change and Calculate Interest and Months
@@ -53,7 +53,7 @@ const Calculator = () =>{
           let monthlyRate=Number(event.target.value/100/12).toFixed(5);
           setcalcData( prevState=> ( {...prevState , interest:monthlyRate}))
           //console.log("Rate"+monthlyRate,","+ calcData.interest)
-          //resultCalc(calcData)
+          resultCalc(calcData)
         }
         
     }  
